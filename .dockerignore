@@ -1,0 +1,4 @@
+#Exclude
+!applcition
+!app.py
+!requirements.txt

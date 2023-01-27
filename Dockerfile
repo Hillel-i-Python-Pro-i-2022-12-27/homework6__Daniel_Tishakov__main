@@ -17,9 +17,10 @@ COPY --chown=${USER} requirements.txt requirements.txt
 RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
-COPY --chown=${USER} ./main.py main.py
+COPY --chown=${USER} ./app.py app.py
 COPY --chown=${USER} ./application application
 
 USER ${USER}
 
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["flask", "run"]
+
